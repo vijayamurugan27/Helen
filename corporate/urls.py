@@ -20,7 +20,7 @@ from corporate import views
 urlpatterns = [
     # path('', views.home1, name = 'home1'),
     path('colleges', views.colleges, name = 'colleges'),
-    # path('home', views.home, name = 'home'),
+    path('home', views.home, name = 'home'),
     path('about', views.about, name = 'about'),
     path('blog', views.blog, name = 'blog'),
     path('portfolio', views.portfolio, name = 'portfolio'),
