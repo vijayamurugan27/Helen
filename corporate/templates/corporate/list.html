@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Colleges in Chennai</title>
+    <style>
+        table,th,  td {
+          border: 2px solid black;
+          
+        }
+        td{
+            background-color: rgb(211, 209, 209);
+            color: black;
+            width: auto;            
+            text-align: center;
+            
+        }
+        th{
+            background-color: blanchedalmond;
+        }
+        table{
+            /* border-color: rebeccapurple; */
+            width: 90%;
+        }
+        </style>
+        
+</head>
+<body>
+    <h1>
+        Hai this is the list of colleges in Chennai.
+    </h1>
+<p>
+    We have planned to go for training for these colleges in Chennai.
+</p>
+   
+    <table style="float: right;">
+        <tr>
+            <th>College ID </th>
+            <th>College Name </th>
+            <th>Place  </th>
+            <th>Logo </th> 
+        </tr>
+        {% for colleges in colleges %}
+        <tr>            
+            
+                <td>{{colleges.id}}</td>
+                <td>{{ colleges.name }}</td>
+                <td>{{ colleges.description}}</td>
+                <td><img src = "{{colleges.img.url}}" alt = "College" width = '50' height = '50'></td>
+            
+            
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
